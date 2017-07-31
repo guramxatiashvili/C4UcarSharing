@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <title>C4U Car</title>
+
+    <style>
+#to {
+    margin: 2px ;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+</div>
+<form style="width: 300px;margin: 0 auto;" name="search-form" id="search-form" action="/search" role="search">
+
+<div>
+        <img
+            src="https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/2016/icon-circle.svg"
+            aria-hidden="true"
+            width="20"
+            height="20"></img>
+        <!--<input type="text" id="search_from_name"  name="fn">  </input>-->
+        <label for="search_from_name" >
+            <span>From...
+            <select class="form-control" id="from">
+                  <option>chemnitz</option>
+                  <option>berlin</option>
+                  <option>zwickau</option>
+                  <option>frankfurt</option>
+                  <option>Hamburg</option>
+                  <option>München</option>
+                  <option>Köln </option>
+                  <option>Stuttgart</option>
+                  <option>Düsseldorf</option>
+                  <option>Dortmund</option>
+                  <option>Bremen</option>
+                  <option>Dresden</option>
+             </select>
+            </span>
+        </label>
+      
+    </div>
+
+    <div>
+        <img
+            src="https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/2016/icon-circle.svg"
+            aria-hidden="true"
+            width="20"
+            height="20"></img>
+        <!-- <input type="text" id="search_to_name" name="tn"> </input> -->
+        <label for="search_to_name">
+           <span>To...
+            <select  class="form-control" id="to">
+                  <option>chemnitz</option>
+                  <option>berlin</option>
+                  <option>zwickau</option>
+                  <option>frankfurt</option>
+                  <option>Hamburg</option>
+                  <option>München</option>
+                  <option>Köln </option>
+                  <option>Stuttgart</option>
+                  <option>Düsseldorf</option>
+                  <option>Dortmund</option>
+                  <option>Bremen</option>
+                  <option>Dresden</option>
+             </select>
+           </span>
+        </label>
+        <span></span>
+    </div>
+
+    <div>
+        <img src="https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/2016/icon-calendar.svg"
+            alt=""
+            aria-hidden="true"
+            width="20"
+            height="20"> </img>
+        <input type="date"> </input>
+        <label for="search_to_date">
+            <span>Date</span>
+        </label>
+    </div>
+</form>
+<form  style="width: 300px;margin: 0 auto;" th:action="@{/searchTrip}" method="get">
+    <button class="btn btn-lg btn-primary btn-sm" type="submit"> Find a ride</button>
+	</form>	
+</body>
+</html>

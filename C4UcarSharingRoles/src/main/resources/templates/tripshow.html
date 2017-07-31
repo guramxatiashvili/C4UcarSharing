@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="en">
+
+    <title>C4U Car</title>
+
+</head>
+<body>
+<div class="container">
+
+     <form class="form-horizontal" th:action="@{/logout}" method="post">
+        <div class="form-group">
+            <div class="col-sm-10"><h2>Trip Details</h2></div>
+            <div class="col-sm-2" style="padding-top: 25px;">
+         <span sec:authorize="isAuthenticated()">
+              <input type="submit" value="Sign Out"/>
+           </span>
+
+            </div>
+        </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">From :</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${trip.fromLocation}">From</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">To :</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${trip.toLocation}">From</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Price:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${trip.price}">Priceaddd</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">trip date:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${trip.tripDate}">date....</p>
+                    </div>
+                </div>
+     </form>
+
+</div>
+
+</body>
+</html>

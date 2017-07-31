@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>C4U Car</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/guru.css" />
+</head>
+<body>
+<div class="container">
+
+    <form class="form-horizontal" th:action="@{/logout}" method="post">
+        <div class="form-group">
+            <div class="col-sm-10"> <h2>Trip Create/Update</h2></div>
+            <div class="col-sm-2" style="padding-top: 30px;">
+                <input  type="submit" value="Sign Out"/>
+            </div>
+        </div>
+    </form>
+
+    <div>
+        <form class="form-horizontal" th:object="${trip}" th:action="@{/trip}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+             <div class="form-group">
+                <label class="col-sm-2 control-label">From:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{fromLocation}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">To:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{toLocation}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Price:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{price}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Trip Date:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" th:field="*{tripDate}"/>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
